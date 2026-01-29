@@ -1,0 +1,245 @@
+/* ====== ESTILOS GENERALES ====== */
+.root, .scroll-pane, .viewport, .vbox, .grid-pane {
+    -fx-background-color: #f7f8fa;
+}
+
+/* ScrollPane */
+.scroll-pane {
+    -fx-padding: 10;
+    -fx-background-insets: 0;
+    -fx-fit-to-width: true;
+}
+
+/* ====== LABELS ====== */
+.label {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Títulos principales */
+.label:focused, .label:show-mnemonics {
+    -fx-font-weight: bold;
+}
+
+/* ====== INPUTS ====== */
+.text-field {
+    -fx-pref-height: 36px;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8px;
+    -fx-padding: 0 10 0 10;
+    -fx-border-color: #d0d3d6;
+    -fx-border-radius: 8px;
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI";
+}
+
+/* Hover */
+.text-field:hover {
+    -fx-border-color: #4a90e2;
+}
+
+/* Focus */
+.text-field:focused {
+    -fx-border-color: #4a90e2;
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.12), 5, 0, 0, 0);
+}
+
+/* ====== BOTONES ====== */
+.button {
+    -fx-background-radius: 10px;
+    -fx-padding: 8 20 8 20;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+
+    /* Color base */
+    -fx-background-color: linear-gradient(to bottom, #4a90e2, #357ABD);
+}
+
+/* Hover */
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #6bb2ff, #4a90e2);
+    -fx-cursor: hand;
+}
+
+/* Click */
+.button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #2f5f91, #27527a);
+}
+
+/* ====== SECCIONES ====== */
+.vbox {
+    -fx-spacing: 10;
+}
+
+.grid-pane {
+    -fx-padding: 10;
+}
+
+/* ====== HBOX AREAS ====== */
+.hbox {
+    -fx-spacing: 10;
+}
+
+/* Labels de sección */
+.label[style*="-fx-font-size: 16px"] {
+    -fx-text-fill: #1a252f;
+    -fx-padding: 5 0 0 0;
+}
+/* ====== DATE PICKER ====== */
+.date-picker {
+    -fx-pref-height: 36px;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8px;
+    -fx-border-color: #d0d3d6;
+    -fx-border-radius: 8px;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+}
+
+/* Campo de texto interno */
+.date-picker .text-field {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0 10 0 10;
+}
+
+/* Hover */
+.date-picker:hover {
+    -fx-border-color: #4a90e2;
+}
+
+/* Focus */
+.date-picker:focused {
+    -fx-border-color: #4a90e2;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.12), 5, 0, 0, 0);
+}
+
+/* Botón calendario */
+.date-picker .arrow-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0 8 8 0;
+    -fx-padding: 0 10 0 10;
+}
+
+.date-picker .arrow-button:hover {
+    -fx-background-color: rgba(74, 144, 226, 0.15);
+}
+
+/* Icono calendario */
+.date-picker .arrow {
+    -fx-background-color: #4a90e2;
+}
+
+/* ====== POPUP CALENDARIO ====== */
+.date-picker-popup {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #d0d3d6;
+    -fx-border-radius: 10px;
+}
+
+/* Encabezado mes/año */
+.date-picker-popup .month-year-pane {
+    -fx-background-color: linear-gradient(to bottom, #4a90e2, #357ABD);
+}
+
+.date-picker-popup .month-year-pane .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Días */
+.date-picker-popup .day-cell {
+    -fx-background-radius: 6px;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Hover día */
+.date-picker-popup .day-cell:hover {
+    -fx-background-color: rgba(74, 144, 226, 0.2);
+}
+
+/* Día seleccionado */
+.date-picker-popup .day-cell:selected {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: white;
+}
+
+/* Hoy */
+.date-picker-popup .today {
+    -fx-border-color: #4a90e2;
+    -fx-border-radius: 6px;
+}
+
+/* ====== COMBOBOX ====== */
+.combo-box {
+    -fx-pref-height: 36px;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8px;
+    -fx-border-color: #d0d3d6;
+    -fx-border-radius: 8px;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+}
+
+/* Área del texto */
+.combo-box .list-cell {
+    -fx-padding: 0 10 0 10;
+    -fx-text-fill: #2c3e50;
+    -fx-background-color: transparent;
+}
+
+/* Hover */
+.combo-box:hover {
+    -fx-border-color: #4a90e2;
+}
+
+/* Focus */
+.combo-box:focused {
+    -fx-border-color: #4a90e2;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.12), 5, 0, 0, 0);
+}
+
+/* Botón flecha */
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0 8 8 0;
+    -fx-padding: 0 10 0 10;
+}
+
+/* Hover flecha */
+.combo-box .arrow-button:hover {
+    -fx-background-color: rgba(74, 144, 226, 0.15);
+}
+
+/* Icono flecha */
+.combo-box .arrow {
+    -fx-background-color: #4a90e2;
+}
+
+/* ====== POPUP LISTA ====== */
+.combo-box-popup .list-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #d0d3d6;
+    -fx-border-radius: 10px;
+    -fx-padding: 4;
+}
+
+/* Elementos */
+.combo-box-popup .list-cell {
+    -fx-padding: 8 12 8 12;
+    -fx-background-radius: 6px;
+}
+
+/* Hover item */
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: rgba(74, 144, 226, 0.15);
+}
+
+/* Item seleccionado */
+.combo-box-popup .list-cell:selected {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: white;
+}
