@@ -186,6 +186,17 @@ public class CreadorController {
         m.put("precioArriendoLetras", txtPrecioArriendoLetras.getText());
         m.put("precioDeposito", txtPrecioDeposito.getText());
 
+        m.put("empresaResponsable", txtEmpresaResponsable.getText());
+        m.put("nombreResponsable", txtNombreResponsable.getText());
+        m.put("nitResponsable", txtNitResponsable.getText());
+        m.put("correoResponsable", txtCorreoResponsable.getText());
+
+        m.put("celularArrendatario", txtCelularArrendatario.getText());
+        m.put("correoArrendatario", txtCorreoArrendatario.getText());
+
+        m.put("celularCodeudor", txtCelularCodeudor.getText());
+        m.put("correoCodeudor", txtCorreoCodeudor.getText());
+
         // ===== DURACIÓN =====
         LocalDate inicio = dpFechaInicio.getValue();
         LocalDate fin = dpFechaFin.getValue();
