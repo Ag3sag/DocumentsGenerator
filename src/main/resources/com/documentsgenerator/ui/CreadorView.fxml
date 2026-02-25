@@ -48,6 +48,10 @@
                     <TextField fx:id="txtCorreoArrendatario"
                                promptText="Correo electrónico"/>
 
+                    <Label fx:id="lblErrorCorreoArrendatario"
+                           textFill="red"
+                           visible="false" />
+
                     <Label text="Dirección del Inmueble"
                            style="-fx-font-weight: bold;"/>
 
@@ -78,6 +82,10 @@
                     <TextField fx:id="txtCorreoCodeudor"
                                promptText="Correo"/>
 
+                    <Label fx:id="lblErrorCorreoCodeudor"
+                           textFill="red"
+                           visible="false" />
+
                     <Label text="Valores del contrato"
                            style="-fx-font-weight: bold;"/>
 
@@ -85,21 +93,12 @@
                                promptText="Canon de arrendamiento"/>
 
                     <TextField fx:id="txtPrecioArriendoLetras"
-                               promptText="Canon en letras"/>
+                               promptText="Canon en letras"
+                               editable="false"/>
 
                     <TextField fx:id="txtPrecioDeposito"
                                promptText="Depósito"/>
 
-                    <HBox spacing="10">
-                        <TextField fx:id="txtDuracion"
-                                   promptText="Duración números"/>
-
-                        <TextField fx:id="txtDuracionLetras"
-                                   promptText="Duración letras"/>
-
-                        <TextField fx:id="txtMesBool"
-                                   promptText="Meses / Años"/>
-                    </HBox>
                 </VBox>
 
                 <!-- FECHAS -->

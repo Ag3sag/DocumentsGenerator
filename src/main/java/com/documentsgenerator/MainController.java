@@ -2,8 +2,6 @@ package com.documentsgenerator;
 
 import javafx.fxml.FXML;
 import javafx.geometry.Rectangle2D;
-import javafx.scene.control.Label;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -35,7 +33,7 @@ public class MainController {
             Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
 
             // Opcional: tamaño inicial deseado
-            double initialWidth = 1000;
+            double initialWidth = 1266;
             double initialHeight = 700;
 
             Scene scene = new Scene(root,
