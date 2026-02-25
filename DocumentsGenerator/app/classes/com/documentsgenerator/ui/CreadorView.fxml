@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.documentsgenerator.CreadorController"
+            stylesheets="@Creadorcss.css"
+            fitToWidth="true">
+
+    <content>
+        <VBox spacing="20">
+            <padding>
+                <Insets top="20" right="30" bottom="20" left="30"/>
+            </padding>
+
+            <Label text="Contrato de Arrendamiento"
+                   style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+            <!-- GRID PRINCIPAL -->
+            <GridPane hgap="30" vgap="15">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="50"/>
+                    <ColumnConstraints percentWidth="50"/>
+                </columnConstraints>
+
+                <!-- COLUMNA IZQUIERDA -->
+                <VBox spacing="15" GridPane.columnIndex="0">
+                    <Label text="Datos Arrendatario"
+                           style="-fx-font-weight: bold; -fx-font-size: 16px;"/>
+
+                    <TextField fx:id="txtArrendatario" promptText="Nombre"/>
+
+                    <ComboBox fx:id="cbDocumentoArrendatario"
+                              promptText="Tipo de documento"/>
+
+                    <TextField fx:id="txtCedulaArrendatario"
+                               promptText="Número documento"/>
+
+                    <TextField fx:id="txtLugarExpedicionArrendatario"
+                               promptText="Lugar expedición"/>
+
+                    <TextField fx:id="txtCelularArrendatario"
+                               promptText="Celular"/>
+
+                    <TextField fx:id="txtCorreoArrendatario"
+                               promptText="Correo electrónico"/>
+
+                    <Label fx:id="lblErrorCorreoArrendatario"
+                           textFill="red"
+                           visible="false" />
+
+                    <Label text="Dirección del Inmueble"
+                           style="-fx-font-weight: bold;"/>
+
+                    <TextField fx:id="txtDireccionInmueble"
+                               promptText="Dirección del inmueble"/>
+                </VBox>
+
+                <!-- COLUMNA DERECHA -->
+                <VBox spacing="15" GridPane.columnIndex="1">
+                    <Label text="Datos Codeudor"
+                           style="-fx-font-weight: bold; -fx-font-size: 16px;"/>
+
+                    <TextField fx:id="txtCodeudor"
+                               promptText="Nombre codeudor"/>
+
+                    <ComboBox fx:id="cbDocumentoCodeudor"
+                              promptText="Tipo de documento"/>
+
+                    <TextField fx:id="txtCedulaCodeudor"
+                               promptText="Documento codeudor"/>
+
+                    <TextField fx:id="txtLugarExpedicionCodeudor"
+                               promptText="Lugar expedición"/>
+
+                    <TextField fx:id="txtCelularCodeudor"
+                               promptText="Celular"/>
+
+                    <TextField fx:id="txtCorreoCodeudor"
+                               promptText="Correo"/>
+
+                    <Label fx:id="lblErrorCorreoCodeudor"
+                           textFill="red"
+                           visible="false" />
+
+                    <Label text="Valores del contrato"
+                           style="-fx-font-weight: bold;"/>
+
+                    <TextField fx:id="txtPrecioArriendo"
+                               promptText="Canon de arrendamiento"/>
+
+                    <TextField fx:id="txtPrecioArriendoLetras"
+                               promptText="Canon en letras"
+                               editable="false"/>
+
+                    <TextField fx:id="txtPrecioDeposito"
+                               promptText="Depósito"/>
+
+                </VBox>
+
+                <!-- FECHAS -->
+                <VBox spacing="15"
+                      GridPane.columnIndex="0"
+                      GridPane.rowIndex="1"
+                      GridPane.columnSpan="2">
+
+                    <HBox spacing="30">
+                        <VBox>
+                            <Label text="Lugar del contrato"/>
+                            <TextField fx:id="txtLugar"
+                                       promptText="Municipio"/>
+                        </VBox>
+
+                        <VBox>
+                            <Label text="Fecha Inicio"/>
+                            <DatePicker fx:id="dpFechaInicio"/>
+                        </VBox>
+
+                        <VBox>
+                            <Label text="Fecha Final"/>
+                            <DatePicker fx:id="dpFechaFin"/>
+                        </VBox>
+
+                        <VBox>
+                            <Label text="Fecha Firma"/>
+                            <DatePicker fx:id="dpFechaFirma"/>
+                        </VBox>
+                    </HBox>
+
+                    <Label text="Datos Arrendador"
+                           style="-fx-font-weight: bold; -fx-font-size: 16px;"/>
+
+                    <HBox spacing="20">
+                        <TextField fx:id="txtEmpresaResponsable"
+                                   promptText="Empresa"/>
+
+                        <TextField fx:id="txtNombreResponsable"
+                                   promptText="Representante"/>
+
+                        <TextField fx:id="txtNitResponsable"
+                                   promptText="NIT"/>
+
+                        <TextField fx:id="txtCorreoResponsable"
+                                   promptText="Correo"/>
+                    </HBox>
+
+                </VBox>
+            </GridPane>
+
+            <!-- BOTONES -->
+            <HBox spacing="20" alignment="CENTER">
+                <Button text="Generar Contrato"
+                        onAction="#onGenerarDocx"/>
+                <Button text="Generar PDF"
+                        onAction="#onGenerarPdf"/>
+            </HBox>
+
+        </VBox>
+    </content>
+</ScrollPane>
